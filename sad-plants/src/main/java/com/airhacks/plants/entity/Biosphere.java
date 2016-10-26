@@ -3,11 +3,13 @@ package com.airhacks.plants.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 /**
  *
  * @author airhacks.com
  */
+@NamedQuery(name = "findByTemp", query = "SELECT b from Biosphere b where b.temperature = :temperature")
 @Entity
 public class Biosphere {
 
@@ -23,6 +25,18 @@ public class Biosphere {
     }
 
     public Biosphere() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public int getTemperature() {
+        return temperature;
+    }
+
+    public String getState() {
+        return state;
     }
 
 }
