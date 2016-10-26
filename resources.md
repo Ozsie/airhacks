@@ -19,3 +19,5 @@ http://www.adam-bien.com/roller/abien/entry/java_mission_control_development_pri
 http://www.adam-bien.com/roller/abien/entry/mission_critical_low_latency_java
 http://www.oracle.com/technetwork/tutorials/tutorials-1876574.html
 http://openjdk.java.net/projects/code-tools/jmh/
+http://www.adam-bien.com/roller/abien/entry/how_to_reuse_java_ee
+http://www.adam-bien.com/roller/abien/entry/unit_integration_testing_the_bean
