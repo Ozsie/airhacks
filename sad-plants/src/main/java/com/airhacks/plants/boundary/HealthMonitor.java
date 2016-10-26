@@ -15,7 +15,7 @@ public class HealthMonitor {
     MoistureSensor ms;
 
     public String state() {
-        if (this.ms.sufficientWaterAvailable()) {
+        if (!this.ms.sufficientWaterAvailable()) {
             return "dry will die soon";
         }
         return "still o.k.";
