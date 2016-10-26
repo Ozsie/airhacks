@@ -4,6 +4,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.json.Json;
 import javax.json.JsonObject;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 
 /**
@@ -17,6 +18,7 @@ public class HealthCheckResource {
     @Inject
     HealthMonitor hm;
 
+    @GET
     public JsonObject health() {
         return Json.createObjectBuilder().
                 add("health", this.hm.state()).
