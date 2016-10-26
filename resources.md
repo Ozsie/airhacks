@@ -11,3 +11,11 @@ http://pitest.org
 ## Jersey test framework
 
 https://github.com/AdamBien/javaeetesting/tree/master/jersey-testframework
+## MAT
+http://www.eclipse.org/mat/
+
+-XsX:+HeapDumpOnOutOfMemoryError
+http://www.adam-bien.com/roller/abien/entry/java_mission_control_development_pricing
+http://www.adam-bien.com/roller/abien/entry/mission_critical_low_latency_java
+http://www.oracle.com/technetwork/tutorials/tutorials-1876574.html
+http://openjdk.java.net/projects/code-tools/jmh/
