@@ -1,8 +1,10 @@
 package com.airhacks.plants;
 
+import javax.json.Json;
 import javax.json.JsonObject;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import static junit.framework.Assert.assertNotNull;
@@ -36,6 +38,13 @@ public class HealthCheckIT {
         String expected = "dry";
         String actual = result.getString("health", null);
         assertThat(actual, startsWith(expected));
+    }
+
+    @Test
+    public void saveStatus() {
+        JsonObject input = Json.createObjectBuilder().add("status", "from test for kits").build();
+        Response response = this.tut.request().post(Entity.json(input));
+        assertThat(response.getStatusInfo().getFamily(), is(Response.Status.Family.SUCCESSFUL));
     }
 
 }
