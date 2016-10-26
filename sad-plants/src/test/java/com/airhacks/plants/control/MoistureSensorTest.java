@@ -15,6 +15,9 @@ public class MoistureSensorTest {
     @Rule
     public ExpectedException expected = ExpectedException.none();
 
+    @Rule
+    public CustomRule custom = new CustomRule();
+
     private MoistureSensor cut;
 
     @Before
