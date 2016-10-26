@@ -23,3 +23,5 @@ http://www.adam-bien.com/roller/abien/entry/how_to_reuse_java_ee
 http://www.adam-bien.com/roller/abien/entry/unit_integration_testing_the_bean
 https://github.com/AdamBien/spg
 https://github.com/AdamBien/sheetfit
+
+-javaagent:jacocoagent.jar=destfile=jacoco.exec,append=true,includes=com.airhacks.
