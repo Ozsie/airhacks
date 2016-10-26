@@ -42,9 +42,23 @@ public class HealthCheckIT {
 
     @Test
     public void saveStatus() {
-        JsonObject input = Json.createObjectBuilder().add("status", "from test for kits").build();
-        Response response = this.tut.request().post(Entity.json(input));
-        assertThat(response.getStatusInfo().getFamily(), is(Response.Status.Family.SUCCESSFUL));
+        JsonObject input = Json.createObjectBuilder().
+                add("status", "from test for kits").
+                build();
+        Response response = this.tut.request().
+                post(Entity.json(input));
+        assertThat(response.getStatusInfo().getFamily(),
+                is(Response.Status.Family.SUCCESSFUL));
+        assertThat(response.getStatus(), is(201));
+        String locationHeader = response.getHeaderString("Location");
+        assertNotNull(locationHeader);
+        System.out.println("locationHeader = " + locationHeader);
+
+        JsonObject status = this.client.
+                target(locationHeader).
+                request().
+                get(JsonObject.class);
+        assertNotNull(status);
     }
 
 }
