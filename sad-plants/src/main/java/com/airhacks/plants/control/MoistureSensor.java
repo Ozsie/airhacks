@@ -13,4 +13,8 @@ public class MoistureSensor {
         return false;
     }
 
+    public void dangerous() {
+        throw new IllegalStateException("its not friday");
+    }
+
 }
