@@ -21,3 +21,5 @@ http://www.oracle.com/technetwork/tutorials/tutorials-1876574.html
 http://openjdk.java.net/projects/code-tools/jmh/
 http://www.adam-bien.com/roller/abien/entry/how_to_reuse_java_ee
 http://www.adam-bien.com/roller/abien/entry/unit_integration_testing_the_bean
+https://github.com/AdamBien/spg
+https://github.com/AdamBien/sheetfit
